@@ -13,7 +13,12 @@ CMD_ARGS=$1
 ########################################### User can modify #############################################
 RKBIN_TOOLS=../rkbin/tools
 CROSS_COMPILE_ARM32=~/toolchains/gcc-arm-11.2-2022.02-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-
-CROSS_COMPILE_ARM64=~/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+# CROSS_COMPILE_ARM64=~/toolchains/gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+
+GCC=`realpath ../gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu`
+CROSS_COMPILE_ARM64=${GCC}/bin/aarch64-none-linux-gnu-
+echo "using gcc: [${CROSS_COMPILE_ARM64}]"
+
 ########################################### User not touch #############################################
 # Declare global INI file searching index name for every chip, update in select_chip_info()
 RKCHIP=
