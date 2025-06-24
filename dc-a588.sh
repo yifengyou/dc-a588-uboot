@@ -23,9 +23,10 @@ cp spl/u-boot-spl.bin ../rkbin/bin/rk35/rk3588_spl_v3.bin
 
 ls -alh fit/uboot.itb
 
-mkdir -p ../rockdev/
-cp -a fit/uboot.itb ../rockdev/uboot.img
-ls -alh ../rockdev/uboot.img
-md5sum ../rockdev/uboot.img
+cp -a fit/uboot.itb uboot.img
+ls -alh uboot.img
+md5sum uboot.img
+
 echo "All done! [$?]"
+exit 0
 
